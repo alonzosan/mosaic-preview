@@ -1,10 +1,8 @@
 
 import os
 from qgis.core import (
-    QgsVectorLayer,
     QgsRasterLayer,
     QgsProject,
-    QgsProcessingFeatureSourceDefinition,
 )
 from qgis import processing
 
