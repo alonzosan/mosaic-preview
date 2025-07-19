@@ -1,0 +1,7 @@
+[general]
+name=Mosaic Preview
+qgisMinimumVersion=3.0
+description=Generate footprints, load georeferenced images, and mosaic drone captures
+version=1.0
+author=Techno Analytics
+email=erick@technoanalytics.com

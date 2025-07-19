@@ -2,7 +2,10 @@ from PyQt5.QtWidgets import QFileDialog, QMessageBox
 from .mosaic_preview_dialog_base import Ui_MosaicPreviewDialogBase
 from PyQt5.QtWidgets import QDialog
 import os
-from .scripts.processor import process_footprint, process_geoimage, process_mosaic
+try:
+    from .mosaic_preview.processor import process_footprint, process_geoimage, process_mosaic
+except ImportError:
+    from mosaic_preview.processor import process_footprint, process_geoimage, process_mosaic
 
 class MosaicPreviewDialog(QDialog, Ui_MosaicPreviewDialogBase):
     def __init__(self, parent=None):

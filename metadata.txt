@@ -17,7 +17,7 @@ about=This plugin allows you to preview drone images directly in QGIS using GPS 
 
 tracker=https://github.com/alonzosan/mosaic-preview/issues
 repository=https://github.com/alonzosan/mosaic-preview
-category=Raster
+
 
 
 # End of mandatory metadata
