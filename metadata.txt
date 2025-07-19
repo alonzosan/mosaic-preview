@@ -15,8 +15,11 @@ email=info@bitechnoanalytics.com
 
 about=This plugin allows you to preview drone images directly in QGIS using GPS metadata. It supports three modes: footprint geometries, individual georeferenced images, and a fast mosaic preview. Ideal for quick inspection, field verification, and pre-processing.
 
-tracker=https://github.com/tu_usuario/mosaic-preview/issues
-repository=https://github.com/tu_usuario/mosaic-preview
+tracker=https://github.com/alonzosan/mosaic-preview/issues
+repository=https://github.com/alonzosan/mosaic-preview
+category=Raster
+
+
 # End of mandatory metadata
 
 # Recommended items:
@@ -28,7 +31,7 @@ hasProcessingProvider=no
 # Tags are comma separated with spaces allowed
 tags=python, qgis-plugin, drone, orthomosaic, preview, georeference, agriculture
 
-homepage=https://github.com/tu_usuario/mosaic-preview
+homepage=homepage=https://github.com/alonzosan/mosaic-preview
 category=Plugins
 icon=icon.png
 # experimental flag
