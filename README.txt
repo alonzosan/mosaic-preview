@@ -1,32 +1,36 @@
-Plugin Builder Results
 
-Your plugin MosaicPreview was created in:
-    C:/BUSINESS_INTELLIGENCE/TA/Proyectos/QGISPlugins\mosaic_preview
+Mosaic Preview Plugin for QGIS - Guía para desarrolladores
+==========================================================
 
-Your QGIS plugin directory is located at:
-    C:/Users/141194/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins
+Directorio del plugin:
+    C:/BUSINESS_INTELLIGENCE/TA/Proyectos/QGISPlugins/mosaic_preview
 
-What's Next:
+Directorio de plugins de QGIS (usuario):
+    C:/Users/<usuario>/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins
 
-  * Copy the entire directory containing your new plugin to the QGIS plugin
-    directory
+Pasos para desarrollo y pruebas:
 
-  * Compile the resources file using pyrcc5
+  1. Copia el directorio completo del plugin a la carpeta de plugins de QGIS.
+  2. Compila los recursos con:
+         pyrcc5 resources.qrc -o resources.py
+  3. Compila la interfaz si modificas el archivo .ui:
+         pyuic5 mosaic_preview_dialog_base.ui -o mosaic_preview_dialog_base.py
+  4. Ejecuta los tests:
+         make test
+  5. Activa el plugin en QGIS desde el administrador de complementos.
+  6. Personaliza el código en `mosaic_preview.py` y la interfaz en Qt Designer.
+  7. Cambia el ícono por uno propio en icon.png si lo deseas.
+  8. Usa el Makefile o pb_tool para automatizar tareas de build y despliegue.
 
-  * Run the tests (``make test``)
+Documentación de usuario y casos de uso:
+  Consulta el archivo README.md para instrucciones detalladas, ejemplos y capturas de pantalla.
 
-  * Test the plugin by enabling it in the QGIS plugin manager
+Enlaces útiles:
+  - PyQGIS Developer Cookbook: https://docs.qgis.org/latest/en/docs/pyqgis_developer_cookbook/
+  - Repositorio del plugin: https://github.com/alonzosan/mosaic-preview
+  - Reporte de issues: https://github.com/alonzosan/mosaic-preview/issues
 
-  * Customize it by editing the implementation file: ``mosaic_preview.py``
+Contacto:
+  Techno Analytics - info@bitechnoanalytics.com
 
-  * Create your own custom icon, replacing the default icon.png
-
-  * Modify your user interface by opening MosaicPreview_dialog_base.ui in Qt Designer
-
-  * You can use the Makefile to compile your Ui and resource files when
-    you make changes. This requires GNU make (gmake)
-
-For more information, see the PyQGIS Developer Cookbook at:
-http://www.qgis.org/pyqgis-cookbook/index.html
-
-(C) 2011-2018 GeoApt LLC - geoapt.com
+(C) 2025 Techno Analytics
