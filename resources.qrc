@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/mosaic_preview" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>
