@@ -9,9 +9,9 @@ from qgis.core import (
 from qgis import processing
 
 def process_footprint(folder_path, logger):
-    logger.append("Generating footprint polygons from images in: " + folder_path)
+    logger.append("Generating footprint polygons from drone images (JPG) in: " + folder_path)
     for filename in os.listdir(folder_path):
-        if filename.endswith(".tif") or filename.endswith(".tiff"):
+        if filename.lower().endswith(".jpg"):
             raster_path = os.path.join(folder_path, filename)
             layer_name = os.path.splitext(filename)[0]
             output_path = os.path.join(folder_path, f"{layer_name}_footprint.gpkg")
@@ -30,9 +30,9 @@ def process_footprint(folder_path, logger):
     logger.append("Footprint generation complete.")
 
 def process_geoimage(folder_path, logger):
-    logger.append("Loading georeferenced images from: " + folder_path)
+    logger.append("Loading georeferenced drone images (JPG) from: " + folder_path)
     for filename in os.listdir(folder_path):
-        if filename.endswith(".tif") or filename.endswith(".tiff"):
+        if filename.lower().endswith(".jpg"):
             image_path = os.path.join(folder_path, filename)
             raster_layer = QgsRasterLayer(image_path, filename)
             if raster_layer.isValid():
@@ -43,13 +43,13 @@ def process_geoimage(folder_path, logger):
     logger.append("GeoImage loading complete.")
 
 def process_mosaic(folder_path, logger):
-    logger.append("Creating mosaic from images in: " + folder_path)
+    logger.append("Creating mosaic from drone images (JPG) in: " + folder_path)
     inputs = []
     for filename in os.listdir(folder_path):
-        if filename.endswith(".tif") or filename.endswith(".tiff"):
+        if filename.lower().endswith(".jpg"):
             inputs.append(os.path.join(folder_path, filename))
     if not inputs:
-        logger.append("✗ No TIFF images found to mosaic.")
+        logger.append("✗ No JPG images found to mosaic.")
         return
     output_path = os.path.join(folder_path, "mosaic.tif")
     try:
